@@ -1,0 +1,31 @@
+#include <cs50.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+// This is the int to roman num program.
+// This program takes the ascii value at the end of a string, an int,
+// and then
+
+int main(void)
+{
+    string z = get_string("Input: ");
+    int iteration = 1;
+    for (int length_of_string = 0; length_of_string < strlen(z);)
+    {
+        length_of_string++;
+        if (length_of_string == strlen(z))
+        {
+            length_of_string--;
+            for (int y = 0; y < strlen(z);)
+            {
+                    printf("ASCII value of char# %i: %i\n", iteration, z[length_of_string]);
+                    iteration++;
+                    length_of_string--;
+                    y++;
+            }
+            return false;
+        }
+    }
+    return false;
+}
